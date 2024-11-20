@@ -21,23 +21,23 @@ const ProductList = () => {
     setFilter({ ...filter, [event.target.name]: event.target.value });
   };
 
-  // const filteredProducts = products.filter((product) => {
-  //   const minPrice = filter.min === "" ? 0 : Number(filter.min);
-  //   const maxPrice =
-  //     filter.max === "" ? Infinity : Number(filter.max);
-
-  //   return (
-  //     (!filter.category || product.category === filter.category) &&
-  //     product.price >= minPrice &&
-  //     product.price <= maxPrice
-  //   );
-  // });
-
   const filteredProducts = products.filter((product) => {
-    return (!filter.category || product.category === filter.category) &&
-      product.price >= filter.min &&
-      product.price <= filter.max;
+    const minPrice = filter.min === "" ? 0 : Number(filter.min);
+    const maxPrice =
+      filter.max === "" ? Infinity : Number(filter.max);
+
+    return (
+      (!filter.category || product.category === filter.category) &&
+      product.price >= minPrice &&
+      product.price <= maxPrice
+    );
   });
+
+  // const filteredProducts = products.filter((product) => {
+  //   return (!filter.category || product.category === filter.category) &&
+  //     product.price >= filter.min &&
+  //     product.price <= filter.max;
+  // });
 
   return (
     <div>
