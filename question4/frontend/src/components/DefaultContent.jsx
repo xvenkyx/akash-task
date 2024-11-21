@@ -1,29 +1,29 @@
 import React from 'react';
 
 const DefaultContent = () => {
-    const placeholderContent = [
+    const defaultContent = [
         {
-            title: 'New Product Launch',
-            description: 'We are excited to announce the release of our latest product! Stay tuned for more details.',
+            title: 'New Products',
+            description: 'Stay tuned for more details of our latest product!',
         },
         {
-            title: 'Exclusive Deals',
-            description: 'Check out our latest offers and discounts on a variety of products. Don’t miss out!',
+            title: 'Deals',
+            description: 'Dont miss out our latest offers and discounts on a variety of products!',
         },
         {
-            title: 'Company Promotions',
-            description: 'Join us in celebrating our employees’ achievements and company milestones.',
+            title: 'Promotions',
+            description: 'Join us in celebrating our company milestones.',
         },
         {
             title: 'Major Strides',
-            description: 'We’re making progress! Read about our recent advancements and innovations.',
+            description: 'Recent advancements and innovations.',
         },
     ];
 
     return (
         <div>
             <h1>Highlights</h1>
-            {placeholderContent.map((item, index) => (
+            {defaultContent.map((item, index) => (
                 <div
                     key={index}
                     style={{
